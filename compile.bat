@@ -1,0 +1,1 @@
+pyarmor pack -e " -F --icon=udef\\my-app.ico --noconsole --add-data C:\\Users\\sr9000\\AppData\\Local\\Programs\\Python\\Python38\\Lib\\site-packages\\qtmodern\\resources\\*;qtmodern\\resources --add-data udef\\my-app.ico;.\\udef" main.py

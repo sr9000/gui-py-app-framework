@@ -1,6 +1,6 @@
 from typing import Any
 
-from app_framework.singleton import Singleton
+from ..singleton import Singleton
 
 
 class Model:

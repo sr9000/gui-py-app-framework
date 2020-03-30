@@ -6,7 +6,7 @@ from PyQt5.QtGui import QTextCursor, QPixmap, QIcon
 from PyQt5.QtWidgets import QWidget, QLabel, QLineEdit, QScrollArea, QGroupBox, QRadioButton, \
     QCheckBox, QDateEdit, QDateTimeEdit, QTimeEdit, QComboBox, QGridLayout, QProgressBar, QToolButton
 
-from app_framework import VSplit, HSplit, Header, Text, TextInput, IntegerInput, ButtonInput, Group, \
+from components import VSplit, HSplit, Header, Text, TextInput, IntegerInput, ButtonInput, Group, \
     ScrollArea, NamedPlace, TypeSketch, Sketch, FloatInput, RadioButton, CheckBox, DateInput, TimeInput, \
     DateTimeInput, SliderInput, TextMultilineInput, ComboBoxInput, Matrix, ProgressBar, AutoImage, Feed, VText
 from .dependency_injection import make_button_catcher, make_action_catcher, get_dwidgets

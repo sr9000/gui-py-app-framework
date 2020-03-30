@@ -1,7 +1,7 @@
 from pathlib import Path
 from typing import Tuple, List, Optional, Callable
 
-from app_framework.singleton import Singleton
+from .singleton import Singleton
 
 
 class GuiDialog(metaclass=Singleton):

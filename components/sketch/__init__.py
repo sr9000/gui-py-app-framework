@@ -1,11 +1,11 @@
 from typing import Union, Type
 
-from .component import HSplit, VSplit, Text, Header, AutoImage, Feed, VText
+from .basic import HSplit, VSplit, Text, Header, AutoImage, Feed, VText
 from .container import Group, ScrollArea, NamedPlace, Matrix
 from .input import TextInput, IntegerInput, ButtonInput, FloatInput, \
     DateInput, TimeInput, DateTimeInput, SliderInput, TextMultilineInput, \
     ComboBoxInput
-from .subcomponent import RadioButton, CheckBox, ProgressBar
+from .part4meta import RadioButton, CheckBox, ProgressBar
 
 # from typing import TypeVar
 

@@ -6,7 +6,7 @@ from typing import List
 import PIL
 from PIL.Image import Image
 
-from app_framework import *
+from components import *
 from .res import *
 
 

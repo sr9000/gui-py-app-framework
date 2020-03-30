@@ -29,7 +29,7 @@ class WidgetContainer(QMainWindow):
         super().__init__(*args, **kwargs)
         self.widget = init_widget
         self.setCentralWidget(self.widget)
-        self.setWindowIcon(QIcon(join(dirname(abspath(__file__)), icon_path)))
+        self.setWindowIcon(QIcon(join(dirname(abspath(__file__)), '..', icon_path)))
         self.setWindowTitle(window_title)
 
     def replace_widget(self, new_widget: QWidget) -> None:

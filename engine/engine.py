@@ -10,16 +10,16 @@ from PyQt5.QtCore import pyqtSignal, QObject
 from PyQt5.QtGui import QIcon, QFont
 from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow
 
-from dependency_injection import DependencyInjectionApp
-from extra_ui import existing_single_file_dialog, existing_multiple_files_dialog, new_file_dialog, directory_dialog
-from gui_builder import build_widget
-from gui_refresher import refresh_widget
-from udef import main_model, main_view, icon_path, window_title
-from user_dialog import yes_no_dialog, info_dialog, warning_dialog, error_dialog
 from app_framework import *
 from app_framework.dependency_injection import GuiManage, GuiDialog, DependencyInjection
 from app_framework.singleton import Singleton
 from app_framework.sketch.layout import Row
+from udef import main_model, main_view, icon_path, window_title
+from .dependency_injection import DependencyInjectionApp
+from .extra_ui import existing_single_file_dialog, existing_multiple_files_dialog, new_file_dialog, directory_dialog
+from .gui_builder import build_widget
+from .gui_refresher import refresh_widget
+from .user_dialog import yes_no_dialog, info_dialog, warning_dialog, error_dialog
 
 
 class WidgetContainer(QMainWindow):

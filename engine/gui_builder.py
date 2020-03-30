@@ -9,13 +9,13 @@ from PyQt5.QtWidgets import QWidget, QLabel, QSizePolicy, QLineEdit, QVBoxLayout
     QDateTimeEdit, QFrame, QComboBox, QProgressBar, QToolButton
 from more_itertools import divide
 
-from dependency_injection import make_button_catcher, make_action_catcher
-from extra_ui import IntLineEdit, FloatLineEdit, FloatSlider, AutoResizingTextEdit, AutoResizingImage, HSpacer, VLabel, \
-    MyQWidget
 from app_framework import VSplit, HSplit, Header, Text, TextInput, IntegerInput, ButtonInput, Group, \
     ScrollArea, NamedPlace, TypeSketch, Sketch, FloatInput, RadioButton, CheckBox, DateInput, TimeInput, \
     DateTimeInput, SliderInput, TextMultilineInput, ComboBoxInput, Matrix, ProgressBar, AutoImage, Feed, VText
 from app_framework.sketch.layout import Column, Row, AutoColumns
+from .dependency_injection import make_button_catcher, make_action_catcher
+from .extra_ui import IntLineEdit, FloatLineEdit, FloatSlider, AutoResizingTextEdit, AutoResizingImage, HSpacer, VLabel, \
+    MyQWidget
 
 
 def make_feed(feed: Feed) -> Tuple[QWidget, Dict[int, QWidget]]:

@@ -6,12 +6,12 @@ from PyQt5.QtGui import QTextCursor, QPixmap, QIcon
 from PyQt5.QtWidgets import QWidget, QLabel, QLineEdit, QScrollArea, QGroupBox, QRadioButton, \
     QCheckBox, QDateEdit, QDateTimeEdit, QTimeEdit, QComboBox, QGridLayout, QProgressBar, QToolButton
 
-from dependency_injection import make_button_catcher, make_action_catcher, get_dwidgets
-from extra_ui import IntLineEdit, FloatLineEdit, FloatSlider, AutoResizingTextEdit, AutoResizingImage, VLabel
-from gui_builder import build_widget, assign_group_layout, filling_scroll_area_layout
 from app_framework import VSplit, HSplit, Header, Text, TextInput, IntegerInput, ButtonInput, Group, \
     ScrollArea, NamedPlace, TypeSketch, Sketch, FloatInput, RadioButton, CheckBox, DateInput, TimeInput, \
     DateTimeInput, SliderInput, TextMultilineInput, ComboBoxInput, Matrix, ProgressBar, AutoImage, Feed, VText
+from .dependency_injection import make_button_catcher, make_action_catcher, get_dwidgets
+from .extra_ui import IntLineEdit, FloatLineEdit, FloatSlider, AutoResizingTextEdit, AutoResizingImage, VLabel
+from .gui_builder import build_widget, assign_group_layout, filling_scroll_area_layout
 
 
 def update_dwidgets(old: Sketch, new: Sketch) -> None:

@@ -12,10 +12,10 @@ from more_itertools import divide
 from sguif.components import VSplit, HSplit, Header, Text, TextInput, IntegerInput, ButtonInput, Group, \
     ScrollArea, NamedPlace, TypeSketch, Sketch, FloatInput, RadioButton, CheckBox, DateInput, TimeInput, \
     DateTimeInput, SliderInput, TextMultilineInput, ComboBoxInput, Matrix, ProgressBar, AutoImage, Feed, VText
-from ..components.layout import Column, Row, AutoColumns
 from .dependency_injection import make_button_catcher, make_action_catcher
-from .extra_ui import IntLineEdit, FloatLineEdit, FloatSlider, AutoResizingTextEdit, AutoResizingImage, HSpacer, VLabel, \
-    MyQWidget
+from .extra_ui import IntLineEdit, FloatLineEdit, FloatSlider, AutoResizingTextEdit, AutoResizingImage, HSpacer, \
+    VLabel, MyQWidget
+from ..components.layout import Column, Row, AutoColumns
 
 
 def make_feed(feed: Feed) -> Tuple[QWidget, Dict[int, QWidget]]:

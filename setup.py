@@ -2,7 +2,6 @@ from setuptools import setup
 
 __version__ = '0.1.0'
 
-
 setup(
     name="sguif",
     version=__version__,
@@ -12,7 +11,8 @@ setup(
     description='Simplest GUI ever.',
     long_description='''Simple GUI components to build your Qt application in seconds.''',
     license="MIT License",
-    packages=['sguif'],
+    packages=['sguif', 'sguif.engine', 'sguif.user_dialog', 'sguif.components', 'sguif.components.layout',
+              'sguif.components.model', 'sguif.components.sketch'],
     keywords=['gui', 'qt', 'simple', 'framework'],
     classifiers=[
         'Development Status :: 3 - Alpha',
@@ -28,5 +28,5 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Topic :: Software Development :: Libraries :: Python Modules',
-   ],
+    ],
 )

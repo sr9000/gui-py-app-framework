@@ -1,6 +1,6 @@
 from typing import List, Dict, Any, Tuple, NamedTuple, Set, Optional, Callable
 
-from app_framework.sketch.layout import Layout
+from .layout import Layout
 
 
 def add_components(src: List[Any]) -> \

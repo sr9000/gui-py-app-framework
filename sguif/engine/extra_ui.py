@@ -1,4 +1,3 @@
-import typing
 from pathlib import Path
 from string import digits
 from typing import Iterable, Any, Tuple, Callable, Optional, List
@@ -12,7 +11,7 @@ from PyQt5.QtWidgets import QSlider, QLineEdit, QSizePolicy, QPlainTextEdit, QFi
     QWidget, QSpacerItem, QHBoxLayout
 from more_itertools import chunked
 
-from dependency_injection import make_action_catcher
+from sguif.engine.dependency_injection import make_action_catcher
 
 negdigits = '-' + digits
 

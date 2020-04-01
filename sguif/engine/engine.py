@@ -1,7 +1,6 @@
 import os
 import sys
 from datetime import datetime, timedelta
-from os.path import join, dirname, abspath
 from threading import RLock
 from typing import List, Dict, Tuple, Callable, Any
 
@@ -10,27 +9,26 @@ from PyQt5.QtCore import pyqtSignal, QObject
 from PyQt5.QtGui import QIcon, QFont
 from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow
 
-from dependency_injection import DependencyInjectionApp
-from extra_ui import existing_single_file_dialog, existing_multiple_files_dialog, new_file_dialog, directory_dialog
-from gui_builder import build_widget
-from gui_refresher import refresh_widget
-from udef import main_model, main_view, icon_path, window_title
-from user_dialog import yes_no_dialog, info_dialog, warning_dialog, error_dialog
-from app_framework import *
-from app_framework.dependency_injection import GuiManage, GuiDialog, DependencyInjection
-from app_framework.singleton import Singleton
-from app_framework.sketch.layout import Row
+from .dependency_injection import DependencyInjectionApp
+from .extra_ui import existing_single_file_dialog, existing_multiple_files_dialog, new_file_dialog, directory_dialog
+from .gui_builder import build_widget
+from .gui_refresher import refresh_widget
+from .user_dialog import yes_no_dialog, info_dialog, warning_dialog, error_dialog
+from ..components import *
+from ..components.dependency_injection import GuiManage, GuiDialog, DependencyInjection
+from ..components.layout import Row
+from ..components.singleton import Singleton
 
 
 class WidgetContainer(QMainWindow):
     widget: QWidget
 
-    def __init__(self, init_widget: QWidget, *args, **kwargs) -> None:
+    def __init__(self, init_widget: QWidget, icon_path: str, title: str, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.widget = init_widget
         self.setCentralWidget(self.widget)
-        self.setWindowIcon(QIcon(join(dirname(abspath(__file__)), icon_path)))
-        self.setWindowTitle(window_title)
+        self.setWindowIcon(QIcon(icon_path))
+        self.setWindowTitle(title)
 
     def replace_widget(self, new_widget: QWidget) -> None:
         self.widget = new_widget
@@ -54,19 +52,19 @@ class App(metaclass=Singleton):
     current_model: Any
     current_view: Tuple[Callable[[Any], List[List[Sketch]]]]
 
-    def __init__(self) -> None:
+    def __init__(self, model: Any, view: Callable[[Any], Any], icon_path: str, title: str) -> None:
         self._qobject_signals = self._QObject()
         self._last_refresh = datetime.now()
         self._refresh_lock = RLock()
         self._application = QApplication([])
         if os.name == 'nt':
             self._application.setFont(QFont('Arial'))
-        self.current_model = main_model
-        self.current_view = (main_view,)
+        self.current_model = model
+        self.current_view = (view,)
         self.widget_sketch = sketch_decorator(self.current_view[0](self.current_model))
 
         widget, self._dwidgets = build_widget(self.widget_sketch)
-        self.widget_container = WidgetContainer(widget)
+        self.widget_container = WidgetContainer(widget, icon_path, title)
 
         # hack
         # self.widget_container.widget: ScrollableArea

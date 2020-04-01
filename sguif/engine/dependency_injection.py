@@ -2,8 +2,8 @@ from typing import Tuple, Callable, Optional, Any, List, Dict
 
 from PyQt5.QtWidgets import QWidget
 
-from components import Sketch
-from components.singleton import Singleton
+from ..components import Sketch
+from ..components.singleton import Singleton
 
 
 class DependencyInjectionApp(metaclass=Singleton):

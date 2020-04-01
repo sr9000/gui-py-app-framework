@@ -12,3 +12,4 @@ from .sketch import Sketch, TypeSketch, \
 from .meta_sketch import ExplorerDialogInput, Selector, TaskManager
 from .task import Task
 from .dependency_injection import GuiManage, GuiDialog
+from .sketch import layout

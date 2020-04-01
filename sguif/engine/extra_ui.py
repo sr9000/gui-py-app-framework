@@ -11,7 +11,7 @@ from PyQt5.QtWidgets import QSlider, QLineEdit, QSizePolicy, QPlainTextEdit, QFi
     QWidget, QSpacerItem, QHBoxLayout
 from more_itertools import chunked
 
-from engine.dependency_injection import make_action_catcher
+from sguif.engine.dependency_injection import make_action_catcher
 
 negdigits = '-' + digits
 

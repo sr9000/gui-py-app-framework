@@ -10,10 +10,10 @@ from PyQt5.QtCore import pyqtSignal, QObject
 from PyQt5.QtGui import QIcon, QFont
 from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow
 
-from components import *
-from components.dependency_injection import GuiManage, GuiDialog, DependencyInjection
-from components.singleton import Singleton
-from components.sketch.layout import Row
+from ..components import *
+from ..components.dependency_injection import GuiManage, GuiDialog, DependencyInjection
+from ..components.singleton import Singleton
+from ..components.layout import Row
 from udef import main_model, main_view, icon_path, window_title
 from .dependency_injection import DependencyInjectionApp
 from .extra_ui import existing_single_file_dialog, existing_multiple_files_dialog, new_file_dialog, directory_dialog

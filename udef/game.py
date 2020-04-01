@@ -6,7 +6,7 @@ from typing import List
 import PIL
 from PIL.Image import Image
 
-from components import *
+from sguif.components import *
 from .res import *
 
 

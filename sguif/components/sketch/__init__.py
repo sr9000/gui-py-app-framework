@@ -6,6 +6,7 @@ from .input import TextInput, IntegerInput, ButtonInput, FloatInput, \
     DateInput, TimeInput, DateTimeInput, SliderInput, TextMultilineInput, \
     ComboBoxInput
 from .part4meta import RadioButton, CheckBox, ProgressBar
+from . import layout
 
 # from typing import TypeVar
 

@@ -1,4 +1,4 @@
-from engine import App
+from sguif import App
 
 
 def main():

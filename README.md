@@ -1,1 +1,1 @@
-gui-py-app-framework
+simple gui framework (sguif)

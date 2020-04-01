@@ -1,0 +1,3 @@
+[submodule "gui-py-app-example"]
+	path = gui-py-app-example
+	url = https://github.com/sr9000/gui-py-app-example.git

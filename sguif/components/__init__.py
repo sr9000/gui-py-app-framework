@@ -1,4 +1,4 @@
-from .model import Model, StaticModel
+from .model import Model, StaticModel, ModalStaticModel
 from .sketch import Sketch, TypeSketch, \
     HSplit, VSplit, Text, Header, \
     Group, ScrollArea, NamedPlace, \

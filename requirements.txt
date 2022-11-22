@@ -1,6 +1,6 @@
 kthread==0.2.2
 more-itertools==8.2.0
-Pillow==7.0.0
+Pillow==9.3.0
 PyQt5==5.14.1
 PyQt5-sip==12.7.1
 qtmodern==0.2.0
